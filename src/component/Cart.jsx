@@ -7,6 +7,8 @@ function Cart() {
     return Math.round(cartItems.reduce((total, item) => total + item.priceTotal, 0)*100)/100;
   }
 
+  if (cartItems.length === 0) return <p>There is currently no item in the card.</p>
+
   return (
     <>
       <div className="cart-items-container">
