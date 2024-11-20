@@ -5,7 +5,6 @@ import { Navigate, Outlet } from "react-router-dom";
 function App() {
   return (
     <>
-      <Navigate to="/home" />
       <Header />
       <main>
         <Outlet />
