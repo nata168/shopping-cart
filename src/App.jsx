@@ -1,10 +1,11 @@
 export { App };
 import { Header } from "./component/Header";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
 
 function App() {
   return (
     <>
+      <Navigate to="/home" />
       <Header />
       <main>
         <Outlet />
