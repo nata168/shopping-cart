@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  background-color: black;
+  color: white;
+  --primary: #ffffff;
+}
+
+body {
+  margin: 0;
+}
+
+a { /* For <Link> tag*/  
+  text-decoration: none;
+  color: var(--primary);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: black;
+  height: calc(7vh + 3vw);
+  padding: min(2vw, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: min(2.5vw, 25px);
+}
+
+#logo {
+  margin: 0;
+  margin-inline: min(2.5vw, 25px);
+  font-size: min(4vw, 40px);
+  color: var(--primary);
+}
+
+.navigation-button {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  font-size: min(2.5vw, 25px);
+  color: var(--primary);
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    border-bottom: 1px solid white;
+  }
+}
+
+#my-cart {
+  fill: var(--primary);
+  width: min(4vw, 40px);
+  margin-left: auto;
+
+  &:hover {
+    border-bottom: 1px solid white;
+  }
+}
+
+.store-item-cards {
+  padding: 2rem;
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vw;
+}
+
+.store-item-card {
+  border: 2px solid white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  &:hover {
+    border: 2px solid slategray;
+  }
+  &:active {
+    border: 2px solid steelblue;
+  }
+}
+
+.store-item-card-img {
+  width: min(25vw, 250px);
+  height: min(35vw, 350px);
+  object-fit: cover;
+}
+
+.store-item-card-name {
+  margin: 0;
+  font-size: min(1.5vw, 15px);
+}
+
+.store-item-page {
+  padding-inline: 2vw;
+  display: flex;
+}
+
+.store-item-page-img {
+  width: min(35vw, 350px);
+  height: min(49vw, 490px);
+  object-fit: cover;
+  border: 4px solid white;
+}
+
+.store-item-page-description {
+  padding-inline: min(3vw, 30px);
+  display: flex;
+  flex-direction: column;
+  gap: min(1.5vw, 15px);
+
+  h1 {
+    margin: 0;
+    font-size: min(3vw, 30px);
+  }
+  p {
+    margin: 0;
+    font-size: min(2vw, 20px);
+  }
+}
+
+.item-price-current {
+  font-size: min(2vw, 20px);
+}
+
+.item-amount-change {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+
+  * {
+    font-size: min(2vw, 20px);
+  }
+
+  .item-amount-button {
+    width: min(3vw, 30px);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    background-color: transparent;
+
+    &:active {
+      background-color: slategray;
+    }
+  }
+
+  .item-amount-span {
+    font-size: min(2vw, 20px);
+  }
+
+}
+
+.add-to-cart-button {
+  background-color: transparent;
+  border: none;
+  margin-top: 5px;
+
+
+  &:hover {
+    .add-to-cart-svg {
+      fill: #666;
+    }
+  }
+  &:active {
+    .add-to-cart-svg {
+      fill: #CCC;
+    }
+  }
+}
+
+.add-to-cart-svg {
+  width: min(2.5vw, 25px);
+  fill: var(--primary);
+}
+
+.back-to-store {
+  padding-left: 1vw;
+  padding-bottom: min(2vw, 20px);
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+
+.back-to-store-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+
+  &:hover {
+    .back-to-store-svg {
+      fill: #666;
+    }
+  }
+  &:active {
+    .back-to-store-svg {
+      fill: #CCC;
+    }
+  }
+}
+
+.back-to-store-svg {
+  width: min(3vw, 30px);
+  fill: var(--primary);
+}
+
+.cart-items-container {
+  padding: 2vw;
+  overflow: auto;
+  margin-bottom: min(11vw, 100px);
+
+}
+
+.cart-items-footer {
+  position: fixed;
+  background-color: black;
+  padding-inline: min(2vw, 25px);
+  height: min(10vw, 90px);
+  width: 100vw;
+  bottom: 0vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  span {
+    font-size: min(4vw, 30px);
+  }
+  button {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid white;
+    padding: 2px 18px;
+    font-size: min(3.5vw, 25px);
+
+    &:hover {
+      background-color: #333;
+    }
+    &:active {
+      background-color: #666;
+    }
+  }
+}
+
+.cart-item-card {
+  display: flex;
+  height: min(10vw, 120px);
+  margin-bottom: 1vw;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.cart-item-right {
+  padding: min(1vw, 10px);
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin: 0;
+    font-size: min(3vw, 30px);
+  }
+  section {
+    font-size: min(2vw, 20px);
+  }
+}
